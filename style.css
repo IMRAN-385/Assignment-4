@@ -1,0 +1,43 @@
+.inter {
+  font-family: "geist", sans-serif;
+}
+
+.nav {
+  font-size: x-large;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.total {
+  height: 97px;
+  width: 360px;
+  border: solid rgb(210, 207, 207) 1px;
+  box-shadow: inset;
+  background-color: #f5f5f5eb;
+  border-radius: 10px;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.para {
+  padding: 20px;
+  padding-bottom: 0;
+  font-size: 14px;
+}
+
+.num {
+  font-size: x-large;
+  font-weight: bold;
+  padding: 0 20px 20px 20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    padding-left: 210px;
+  }
+}

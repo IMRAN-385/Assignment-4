@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="inter">
+  <main>
+    <section>
+      <h1 class="nav sd:text-center">Job Application Tracker</h1>
+      <div class="number grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="total">
+          <p class="para">Total</p>
+          <h2 id="totalnumber" class="num">8</h2>
+        </div>
+        <div class="total">
+          <p class="para">Interview</p>
+          <h2 id="interviewd" class="num text-green-500">1</h2>
+        </div>
+        <div class="total">
+          <p class="para">Rejected</p>
+          <h2 id="rejected" class="num text-red-500">0</h2>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="jobs max-w-6xl mx-auto py-5 ">
+        <div class="numbers flex justify-between ">
+          <h2 class="two font-bold text-lg py-2">Available Jobs</h2>
+          <p class="nmber text-xs text-gray-500 mr-1 pt-3">8 jobs</p>
+        </div>
+        <div class="button gap-20 pb-3">
+          <button id="allbtn" onclick="toggleStyle('allbtn')"
+            class="btn sm:btn-sm md:btn-md  text-xs text-gray-500 px-10">All</button>
+          <button id="interviewbtn" onclick="toggleStyle('interviewbtn')"
+            class="btn sm:btn-sm md:btn-md  text-xs text-gray-500 px-10">Interview</button>
+          <button id="rejectbtn" onclick="toggleStyle('rejectbtn')"
+            class="btn sm:btn-sm md:btn-md  text-xs text-gray-500 px-10">Rejected</button>
+        </div>
+    </section>
+    <section id="allcards" class="max-w-6xl mx-auto py-5"></section>
+  </main>
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
